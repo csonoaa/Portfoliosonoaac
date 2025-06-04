@@ -1220,128 +1220,129 @@ a:hover::after {
         font-size: 12pt;
         line-height: 1.4;
     }
+    
     h1 { font-size: 18pt; }
     h2 { font-size: 16pt; }
     h3 { font-size: 14pt; }
 }
-/* DARK THEME */
-body {
-  background: #121212;
-  color: #eee;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
-}
 
-.pricing-section {
-  padding: 60px 20px;
-  background: #121212;
-}
-
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 10px;
-  color: #fff;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-}
-
-.section-subtitle {
-  text-align: center;
-  color: #ccc;
-  margin-bottom: 40px;
-  font-size: 1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.2s forwards;
-}
-
-.pricing-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-
+/* Pricing Section */
 .pricing-card {
-  flex: 1;
-  min-width: 280px;
-  background: #1e1e1e;
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 1.4s forwards;
+    background: var(--bg-color);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(42, 157, 143, 0.07);
+    transition: all 0.3s ease;
+    text-align: left;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
 }
 
 .pricing-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(255,255,255,0.05);
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(42, 157, 143, 0.13);
+    border-color: var(--accent-color);
 }
 
 .pricing-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #f1f1f1;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
 }
 
-.price {
-  font-size: 1.1rem;
-  color: #9be7ff;
-  margin-bottom: 5px;
+.price-range {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
 
-.ideal {
-  font-style: italic;
-  color: #aaa;
-  margin-bottom: 15px;
+.package-for {
+    font-size: 0.98rem;
+    color: #666;
+    margin-bottom: 1rem;
 }
 
-.pricing-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.pricing-card ul li {
-  padding: 6px 0;
-  border-bottom: 1px solid #2e2e2e;
-  color: #ccc;
+.pricing-features li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2em;
+    position: relative;
+    color: #222;
+    font-size: 0.98rem;
+}
+
+.pricing-features li::before {
+    content: '•';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.1em;
+    top: 0;
 }
 
 .all-plans {
-  margin-top: 50px;
-  background: #181818;
-  border: 1px solid #2a2a2a;
-  border-radius: 10px;
-  padding: 20px;
-  animation: fadeInUp 1.6s forwards;
+    margin-top: 2.5rem;
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    padding: 1.5rem 1rem;
+    display: inline-block;
+    box-shadow: 0 1px 4px rgba(42, 157, 143, 0.06);
 }
 
 .all-plans h4 {
-  margin-bottom: 10px;
-  color: #fff;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
-.all-plans ul {
-  list-style: disc;
-  padding-left: 20px;
-  color: #ccc;
+.all-plans-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.all-plans-features li {
+    margin-bottom: 0.4rem;
+    padding-left: 1.2em;
+    position: relative;
+    color: #222;
+    font-size: 0.97rem;
+}
+
+.all-plans-features li::before {
+    content: '✓';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.1em;
+    top: 0;
+}
+
+@media (max-width: 1023px) {
+    .pricing-card {
+        min-height: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .pricing-card {
+        padding: 1.25rem 0.75rem;
+    }
+    .all-plans {
+        padding: 1rem 0.5rem;
+    }
 }
