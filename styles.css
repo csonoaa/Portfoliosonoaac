@@ -1398,3 +1398,25 @@ a:hover::after {
     margin: 2px 0;
   }
 }
+
+/* Call Now button beside See My Work */
+.call-btn {
+  background: #e91e63;
+  color: #fff;
+  border-color: #e91e63;
+  margin-left: 1rem;
+}
+.call-btn:hover {
+  background: #f50057;
+  border-color: #f50057;
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .btn.mt-4, .call-btn {
+    display: block;
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 1rem;
+  }
+}
