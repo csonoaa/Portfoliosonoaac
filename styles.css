@@ -19,12 +19,12 @@
 
 /* CSS Variables */
 :root {
-    --accent-color: #2a9d8f;
-    --text-color: #000000;
+    --accent-color: #e91e63;
+    --text-color: #1f1f1f;
     --bg-color: #ffffff;
     --light-bg: #f8f9fa;
     --border-color: #e0e0e0;
-    --heading-font: 'Source Serif Pro', serif;
+    --heading-font: 'Poppins', sans-serif;
     --body-font: 'Inter', sans-serif;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
@@ -135,7 +135,8 @@ a {
 }
 
 a:hover, a:focus {
-    color: var(--accent-color);
+    color: #e91e63;
+    transition: color 0.3s;
 }
 
 a::after {
@@ -185,8 +186,9 @@ a:hover::after {
 
 .btn:hover {
     color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(42, 157, 143, 0.3);
+    background: #e91e63;
+    border-color: #e91e63;
+    box-shadow: 0 4px 12px rgba(233, 30, 99, 0.18);
 }
 
 .btn:hover::before {
@@ -208,12 +210,17 @@ a:hover::after {
 /* Utility Classes */
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .section {
-    padding: 4rem 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .text-center {
@@ -326,6 +333,18 @@ a:hover::after {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Fade-in on scroll animation */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: none;
 }
 
 /* Header */

@@ -648,3 +648,12 @@ function checkFieldValue(group, input) {
 
 // Uncomment to enable performance tracking
 // trackPerformance();
+
+// Fade-in on scroll for .fade elements
+const elements = document.querySelectorAll('.fade');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+});
+elements.forEach(el => observer.observe(el));
