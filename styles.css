@@ -1220,8 +1220,80 @@ a:hover::after {
         font-size: 12pt;
         line-height: 1.4;
     }
-    
     h1 { font-size: 18pt; }
     h2 { font-size: 16pt; }
     h3 { font-size: 14pt; }
+}
+.pricing-section {
+  padding: 60px 20px;
+  background: #fdfdfd;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.pricing-card {
+  flex: 1;
+  min-width: 280px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.pricing-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 1.2em;
+  color: #27ae60;
+  margin: 5px 0;
+}
+
+.ideal {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.pricing-card ul {
+  list-style-type: "✅ ";
+  padding-left: 20px;
+}
+
+.all-plans {
+  margin-top: 40px;
+  background: #fffbe6;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ffe58f;
+}
+
+.all-plans h4 {
+  margin-bottom: 10px;
 }
