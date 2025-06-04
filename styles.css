@@ -1224,10 +1224,18 @@ a:hover::after {
     h2 { font-size: 16pt; }
     h3 { font-size: 14pt; }
 }
+/* DARK THEME */
+body {
+  background: #121212;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .pricing-section {
   padding: 60px 20px;
-  background: #fdfdfd;
-  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
 }
 
 .container {
@@ -1236,15 +1244,23 @@ a:hover::after {
 }
 
 .section-title {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 10px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
 }
 
 .section-subtitle {
   text-align: center;
+  color: #ccc;
   margin-bottom: 40px;
-  color: #444;
+  font-size: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s forwards;
 }
 
 .pricing-cards {
@@ -1257,43 +1273,75 @@ a:hover::after {
 .pricing-card {
   flex: 1;
   min-width: 280px;
-  background: white;
-  border: 1px solid #ddd;
+  background: #1e1e1e;
+  border: 1px solid #333;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1.4s forwards;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255,255,255,0.05);
 }
 
 .pricing-card h3 {
-  font-size: 1.3em;
-  margin-bottom: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #f1f1f1;
 }
 
 .price {
-  font-size: 1.2em;
-  color: #27ae60;
-  margin: 5px 0;
+  font-size: 1.1rem;
+  color: #9be7ff;
+  margin-bottom: 5px;
 }
 
 .ideal {
   font-style: italic;
-  color: #888;
-  margin-bottom: 10px;
+  color: #aaa;
+  margin-bottom: 15px;
 }
 
 .pricing-card ul {
-  list-style-type: "✅ ";
-  padding-left: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing-card ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #2e2e2e;
+  color: #ccc;
 }
 
 .all-plans {
-  margin-top: 40px;
-  background: #fffbe6;
+  margin-top: 50px;
+  background: #181818;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
   padding: 20px;
-  border-radius: 8px;
-  border: 1px solid #ffe58f;
+  animation: fadeInUp 1.6s forwards;
 }
 
 .all-plans h4 {
   margin-bottom: 10px;
+  color: #fff;
+}
+
+.all-plans ul {
+  list-style: disc;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
