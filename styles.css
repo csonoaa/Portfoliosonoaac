@@ -1027,7 +1027,7 @@ a:hover::after {
 /* Footer */
 .footer {
     background: var(--text-color);
-    color: #ffffff;
+    color: #fff;
 }
 
 .footer .logo-text {
@@ -1037,21 +1037,16 @@ a:hover::after {
     color: var(--accent-color);
 }
 
-.footer p {
-    color: #ccc;
-}
-
-.footer a {
-    color: #ccc;
-    transition: var(--transition);
+.footer p,
+.footer a,
+.footer-bottom,
+.footer-links a,
+.footer-service-select label {
+    color: #fff !important;
 }
 
 .footer a:hover {
-    color: #ffffff;
-}
-
-.footer a::after {
-    background: #ffffff;
+    color: #e91e63;
 }
 
 .footer-links {
